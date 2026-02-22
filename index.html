@@ -4,7 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Katja Elvov – MPU Coaching</title>
-  <meta name="description" content="Professionelles MPU Coaching in Hofheim. Strukturierte Vorbereitung, Gesprächstraining & individuelle Begleitung. Kostenloses Erstgespräch." />
+
+  <!-- Text, den iOS/Safari als Seitenbeschreibung zeigt -->
+  <meta name="description" content="Professionelles MPU Coaching in Kelkheim (Taunus), Hofheim & online. Strukturierte Vorbereitung, Gesprächstraining & individuelle Begleitung. Kostenloses Erstgespräch." />
+
+  <!-- WICHTIG: Absichtlich KEIN Icon/Logo setzen (damit das kleine Logo oben verschwindet) -->
+  <!-- (Keine <link rel="icon"> und keine <link rel="apple-touch-icon"> ) -->
 
   <style>
     :root{
@@ -12,274 +17,228 @@
       --card:rgba(255,255,255,.06);
       --border:rgba(255,255,255,.12);
       --text:#eaf0ff;
-      --muted:rgba(234,240,255,.75);
-      --accent:#4f7cff;
-      --accent2:#2f6bff;
-      --ok:#1db954;
-      --danger:#ff4d4d;
+      --muted:rgba(234,240,255,.78);
+      --btn:#4f7cff;
+      --btn2:#2f62ff;
+      --danger:#ff5a5a;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-      background: radial-gradient(1200px 600px at 20% 0%, rgba(79,124,255,.20), transparent 60%),
-                  radial-gradient(1200px 700px at 80% 20%, rgba(47,107,255,.18), transparent 55%),
-                  var(--bg);
+      background:radial-gradient(1200px 800px at 30% 0%, rgba(79,124,255,.18), transparent 60%),
+                 radial-gradient(900px 700px at 90% 30%, rgba(47,98,255,.14), transparent 55%),
+                 var(--bg);
       color:var(--text);
-      line-height:1.5;
+      line-height:1.45;
     }
     a{color:inherit}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
-    .topbar{display:flex;align-items:center;gap:14px;margin:10px 0 18px}
-    .logo{
-      width:44px;height:44px;border-radius:12px;
-      object-fit:contain;background:rgba(255,255,255,.08);
-      border:1px solid var(--border); padding:6px;
-    }
-    .brand{font-weight:800;letter-spacing:.2px}
-    .subbrand{color:var(--muted);font-size:14px;margin-top:2px}
-
-    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
-    @media (max-width: 900px){ .grid{grid-template-columns:1fr} }
-
+    .container{max-width:980px;margin:0 auto;padding:24px}
     .card{
       background:var(--card);
       border:1px solid var(--border);
       border-radius:18px;
       padding:22px;
-      box-shadow:0 20px 60px rgba(0,0,0,.25);
+      margin:18px 0;
+      backdrop-filter: blur(8px);
     }
-    h1{margin:0 0 10px;font-size:44px;line-height:1.05}
-    h2{margin:0 0 10px;font-size:30px}
-    p{margin:0 0 12px;color:var(--muted);font-size:18px}
+    h1,h2{margin:0 0 10px 0}
+    h1{font-size:40px;letter-spacing:-.5px}
+    h2{font-size:32px;letter-spacing:-.3px}
+    p{margin:0 0 12px 0;color:var(--muted);font-size:18px}
     .btn{
       display:inline-block;
-      background:linear-gradient(180deg,var(--accent),var(--accent2));
-      color:#fff;
+      background:linear-gradient(180deg,var(--btn),var(--btn2));
+      color:white;
       padding:14px 22px;
       border-radius:14px;
       text-decoration:none;
       font-weight:700;
-      border:0;
-      cursor:pointer;
+      margin-top:10px;
     }
-    .btn.secondary{
-      background:transparent;
-      border:1px solid rgba(79,124,255,.6);
-      color:var(--text);
-    }
-    .btn:active{transform:translateY(1px)}
     .hero-img{
       width:100%;
-      border-radius:18px;
-      border:1px solid var(--border);
-      overflow:hidden;
-      margin-top:14px;
-      background:rgba(0,0,0,.15);
-    }
-    .hero-img img{
-      width:100%;
-      height:auto;
+      max-width:720px;
+      border-radius:16px;
+      margin-top:16px;
       display:block;
-      object-fit:cover;
     }
-
-    .list{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:16px}
-    .list li{margin:6px 0}
-
-    .divider{height:1px;background:rgba(255,255,255,.10);margin:18px 0}
-
-    .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    @media (max-width: 900px){ .two{grid-template-columns:1fr} }
-
-    label{display:block;font-weight:700;margin:12px 0 6px}
+    .section-title{margin-top:6px}
+    ul{margin:10px 0 0 18px;color:var(--muted);font-size:18px}
+    li{margin:6px 0}
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+    }
+    label{display:block;font-weight:700;margin:10px 0 6px 0}
     input,select,textarea{
       width:100%;
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.14);
-      color:var(--text);
-      border-radius:12px;
       padding:12px 12px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(10,16,30,.55);
+      color:var(--text);
       font-size:16px;
       outline:none;
     }
     textarea{min-height:120px;resize:vertical}
-    input::placeholder,textarea::placeholder{color:rgba(234,240,255,.55)}
-    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    @media (max-width: 700px){ .row{grid-template-columns:1fr} }
-
-    .note{
-      font-size:14px;color:rgba(234,240,255,.72);
+    .row{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+    }
+    .small{font-size:14px;color:rgba(234,240,255,.65)}
+    .check{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
       margin-top:10px;
     }
-    .check{
-      display:flex;gap:10px;align-items:flex-start;margin-top:12px;
-      color:rgba(234,240,255,.80);font-size:14px;
-    }
     .check input{width:auto;margin-top:3px}
-    .small{font-size:13px;color:rgba(234,240,255,.72)}
-    .anchor{position:relative;top:-10px}
+    .submit{
+      margin-top:14px;
+      width:100%;
+      border:none;
+      cursor:pointer;
+      font-size:18px;
+    }
+    .hr{
+      height:1px;background:rgba(255,255,255,.10);margin:14px 0;
+    }
+    @media (min-width:760px){
+      .row{grid-template-columns:1fr 1fr}
+      h1{font-size:46px}
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <div class="topbar">
-      <img class="logo" src="logo.png.PNG" alt="Logo Katja Elvov" />
-      <div>
-        <div class="brand">Katja Elvov</div>
-        <div class="subbrand">MPU Coaching · Hofheim & Online</div>
-      </div>
+
+    <!-- HERO -->
+    <div class="card" id="top">
+      <h1>Katja Elvov – MPU Coaching</h1>
+      <p>Professionelle MPU-Vorbereitung mit Struktur, Klarheit und persönlicher Begleitung. <b>Kelkheim (Taunus), Hofheim & online.</b></p>
+
+      <a class="btn" href="#fragebogen">Kostenloses Erstgespräch</a>
+
+      <img class="hero-img" src="foto1.jpg.JPG" alt="Katja Elvov – MPU Coaching">
     </div>
 
-    <div class="grid">
-      <div class="card">
-        <h1>Katja Elvov – MPU Coaching</h1>
-        <p>
-          Professionelle MPU-Vorbereitung mit Struktur, Klarheit und persönlicher Begleitung.
-          Online oder vor Ort in Hofheim.
-        </p>
-
-        <a class="btn" href="#fragebogen">Kostenloses Erstgespräch</a>
-
-        <div class="hero-img">
-          <img src="foto1.jpg.JPG" alt="Katja Elvov Portrait" />
-        </div>
-
-        <div class="divider"></div>
-
-        <h2>So unterstütze ich dich</h2>
-        <ul class="list">
-          <li>Individuelle Analyse deiner Situation & Zielplan</li>
-          <li>Gesprächstraining (Fragen, rote Linien, typische Fallen)</li>
-          <li>Aufarbeitung & überzeugende Darstellung deiner Veränderung</li>
-          <li>Optional: Online-Termine / schnelle Terminvergabe</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2>Zertifizierte MPU Beraterin</h2>
-        <p>Geprüfte MPU Beratung – fundiert, seriös und ohne leere Versprechen.</p>
-        <a class="btn" href="zertifikat.pdf.pdf" target="_blank" rel="noopener">Zertifikat ansehen (PDF)</a>
-
-        <div class="divider"></div>
-
-        <h2>Über mich</h2>
-        <p>
-          Ich begleite meine Klientinnen und Klienten strukturiert, respektvoll und individuell
-          durch den gesamten MPU-Prozess – von der Analyse bis zum sicheren Auftreten im Gespräch.
-        </p>
-        <div class="hero-img">
-          <img src="foto2.jpg.JPG" alt="Über mich" />
-        </div>
-
-        <p class="note">
-          Hinweis: Auf GitHub zählt Groß-/Kleinschreibung. Die Dateinamen müssen exakt so heißen wie oben.
-        </p>
-      </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="two">
-      <div class="card">
-        <h2>Ablauf</h2>
-        <ul class="list">
-          <li><b>1) Erstgespräch</b> – kurz klären, was du brauchst & wie dringend es ist.</li>
-          <li><b>2) Plan</b> – klare Schritte + Vorbereitung auf die typischen MPU-Fragen.</li>
-          <li><b>3) Training</b> – realistische Simulation & Feedback.</li>
-          <li><b>4) Sicherheit</b> – du weißt, was du sagst und warum.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2>Kontakt</h2>
-        <p>Nutze den Fragebogen für ein kostenloses Erstgespräch. Ich melde mich zeitnah.</p>
-        <p class="small">Deine Daten werden nur zur Kontaktaufnahme verwendet.</p>
-      </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- ANKER / FORMULAR -->
-    <div class="anchor" id="fragebogen"></div>
+    <!-- ZERTIFIKAT -->
     <div class="card">
-      <h2>Kostenloses Erstgespräch – Anfrage</h2>
-      <p>Fülle kurz die wichtigsten Infos aus. Du bekommst danach eine Rückmeldung per E-Mail (und ggf. telefonisch).</p>
+      <h2 class="section-title">Zertifizierte MPU Beraterin</h2>
+      <p>Geprüfte MPU Beratung – fundiert, seriös und ohne leere Versprechen.</p>
+      <a class="btn" href="zertifikat.pdf.pdf" target="_blank" rel="noopener">Zertifikat ansehen (PDF)</a>
+    </div>
 
-      <!-- FormSubmit: sendet dir die Anfrage an Katja.elvov@gmx.de -->
+    <!-- ÜBER MICH -->
+    <div class="card">
+      <h2 class="section-title">Über mich</h2>
+      <p>Ich begleite meine Klientinnen und Klienten strukturiert, respektvoll und individuell durch den gesamten MPU-Prozess – von der Analyse bis zum sicheren Auftreten im Gespräch.</p>
+      <img class="hero-img" src="foto2.jpg.JPG" alt="Über mich">
+    </div>
+
+    <!-- ABLAUF -->
+    <div class="card">
+      <h2 class="section-title">Ablauf</h2>
+      <ul>
+        <li><b>1) Erstgespräch</b> – kurz klären, was du brauchst & wie der Weg zur MPU aussieht</li>
+        <li><b>2) Plan</b> – klare Schritte + Vorbereitung auf deine persönliche Fragestellung</li>
+        <li><b>3) Training</b> – Gesprächsübungen, rote Linien, typische Fallen, sichere Antworten</li>
+        <li><b>4) Begleitung</b> – bis du dich stabil, vorbereitet und überzeugend fühlst</li>
+      </ul>
+    </div>
+
+    <!-- FORMULAR -->
+    <div class="card" id="fragebogen">
+      <h2 class="section-title">Kostenloses Erstgespräch – Anfrage</h2>
+      <p>Fülle das Formular kurz aus. Ich melde mich zeitnah bei dir zurück.</p>
+
+      <div class="hr"></div>
+
+      <!-- FormSubmit: sendet direkt an deine E-Mail -->
       <form action="https://formsubmit.co/Katja.elvov@gmx.de" method="POST">
-        <!-- Optionen (kannst du so lassen) -->
-        <input type="hidden" name="_subject" value="Neue Anfrage: MPU Erstgespräch (Website)" />
+        <!-- FormSubmit Einstellungen -->
+        <input type="hidden" name="_subject" value="Neue MPU-Anfrage über katjaelv.github.io" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_captcha" value="false" />
+        <!-- optional: nach dem Senden auf die Seite zurück -->
+        <input type="hidden" name="_next" value="https://katjaelv.github.io/#danke" />
 
         <div class="row">
           <div>
             <label for="name">Name *</label>
-            <input id="name" name="Name" type="text" placeholder="Vor- und Nachname" required />
+            <input id="name" name="Name" type="text" required placeholder="Vor- und Nachname">
           </div>
           <div>
             <label for="email">E-Mail *</label>
-            <input id="email" name="E-Mail" type="email" placeholder="name@email.de" required />
+            <input id="email" name="E-Mail" type="email" required placeholder="name@email.de">
           </div>
         </div>
 
         <div class="row">
           <div>
             <label for="phone">Telefon (optional)</label>
-            <input id="phone" name="Telefon" type="tel" placeholder="+49 ..." />
+            <input id="phone" name="Telefon" type="tel" placeholder="+49 ...">
           </div>
           <div>
-            <label for="city">Ort / Region (optional)</label>
-            <input id="city" name="Ort/Region" type="text" placeholder="z.B. Hofheim, Frankfurt, ..." />
+            <label for="ort">Ort *</label>
+            <select id="ort" name="Ort" required>
+              <option value="" selected disabled>Bitte auswählen</option>
+              <option>Kelkheim (Taunus)</option>
+              <option>Hofheim</option>
+              <option>Online</option>
+              <option>Flexibel / egal</option>
+            </select>
           </div>
         </div>
 
         <div class="row">
           <div>
-            <label for="reason">MPU-Grund *</label>
-            <select id="reason" name="MPU-Grund" required>
+            <label for="grund">Worum geht es bei der MPU? *</label>
+            <select id="grund" name="MPU-Grund" required>
               <option value="" selected disabled>Bitte auswählen</option>
               <option>Alkohol</option>
               <option>Drogen</option>
-              <option>Punkte</option>
+              <option>Punkte / Verkehr</option>
+              <option>Straftat (ohne Drogen/Alkohol)</option>
               <option>Sonstiges</option>
             </select>
           </div>
           <div>
-            <label for="when">Terminwunsch (optional)</label>
-            <input id="when" name="Terminwunsch" type="text" placeholder="z.B. diese Woche abends / nächster Dienstag ..." />
+            <label for="termin">Wunschtermin / Zeitraum (optional)</label>
+            <input id="termin" name="Wunschtermin" type="text" placeholder="z.B. nächste Woche / abends / Wochenende">
           </div>
         </div>
 
         <label for="msg">Kurzbeschreibung *</label>
-        <textarea id="msg" name="Nachricht" placeholder="Kurz: Worum geht es? Gibt es ein MPU-Datum? Was ist dir wichtig?" required></textarea>
+        <textarea id="msg" name="Nachricht" required placeholder="Was ist passiert? Wann ist die MPU ungefähr? Was ist dir wichtig?"></textarea>
 
         <div class="check">
-          <input id="privacy" type="checkbox" required />
-          <label for="privacy" style="margin:0;font-weight:600">
-            Ich stimme zu, dass meine Angaben zur Kontaktaufnahme verwendet werden. *
+          <input id="ds" type="checkbox" required>
+          <label for="ds" style="margin:0;font-weight:600">
+            Ich stimme zu, dass meine Angaben zur Kontaktaufnahme verarbeitet werden. *
+            <div class="small">Du erhältst die Anfrage als E-Mail (FormSubmit).</div>
           </label>
         </div>
 
-        <div style="margin-top:14px">
-          <button class="btn" type="submit">Anfrage senden</button>
-          <a class="btn secondary" href="#top" style="margin-left:10px">Nach oben</a>
-        </div>
+        <button class="btn submit" type="submit">Anfrage absenden</button>
 
-        <p class="note">
-          Wichtig: Beim ersten Test kann FormSubmit dir eine Bestätigungs-Mail schicken (einmal klicken), danach kommt alles automatisch.
+        <p class="small" style="margin-top:10px">
+          Hinweis: Mit dem Absenden wird eine E-Mail an <b>Katja.elvov@gmx.de</b> gesendet.
         </p>
       </form>
     </div>
 
-    <div style="height:22px"></div>
-    <div class="small" id="top">© <span id="year"></span> Katja Elvov</div>
-  </div>
+    <!-- DANKE -->
+    <div class="card" id="danke">
+      <h2 class="section-title">Danke!</h2>
+      <p>Deine Anfrage wurde gesendet. Ich melde mich so schnell wie möglich bei dir.</p>
+      <a class="btn" href="#top">Zurück nach oben</a>
+    </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  </div>
 </body>
 </html>
