@@ -88,157 +88,39 @@
       grid-template-columns:1fr;
       gap:12px;
     }
-    .small{font-size:14px;color:rgba(234,240,255,.65)}
-    .check{
-      display:flex;
-      gap:10px;
-      align-items:flex-start;
-      margin-top:10px;
-    }
-    .check input{width:auto;margin-top:3px}
-    .submit{
-      margin-top:14px;
-      width:100%;
-      border:none;
-      cursor:pointer;
-      font-size:18px;
-    }
-    .hr{
-      height:1px;background:rgba(255,255,255,.10);margin:14px 0;
-    }
-    @media (min-width:760px){
-      .row{grid-template-columns:1fr 1fr}
-      h1{font-size:46px}
-    }
-  </style>
-</head>
+ <div class="card" id="fragebogen">
+<h2>Kostenloses Erstgespräch – Anfrage</h2>
 
-<body>
-  <div class="container">
+<form action="https://formsubmit.co/Katja.elvov@gmx.de" method="POST">
 
-    <!-- HERO -->
-    <div class="card" id="top">
-      <h1>Katja Elvov – MPU Coaching</h1>
-      <p>Professionelle MPU-Vorbereitung mit Struktur, Klarheit und persönlicher Begleitung. <b>Kelkheim (Taunus), Hofheim & online.</b></p>
+  <!-- FormSubmit Einstellungen -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="Neue MPU Anfrage von Website">
+  <input type="hidden" name="_next" value="https://katjaelvov.github.io/#danke">
 
-      <a class="btn" href="#fragebogen">Kostenloses Erstgespräch</a>
+  <label>Name</label>
+  <input type="text" name="Name" required>
 
-      <img class="hero-img" src="foto1.jpg.JPG" alt="Katja Elvov – MPU Coaching">
-    </div>
+  <label>E-Mail</label>
+  <input type="email" name="Email" required>
 
-    <!-- ZERTIFIKAT -->
-    <div class="card">
-      <h2 class="section-title">Zertifizierte MPU Beraterin</h2>
-      <p>Geprüfte MPU Beratung – fundiert, seriös und ohne leere Versprechen.</p>
-      <a class="btn" href="zertifikat.pdf.pdf" target="_blank" rel="noopener">Zertifikat ansehen (PDF)</a>
-    </div>
+  <label>Telefon (optional)</label>
+  <input type="text" name="Telefon">
 
-    <!-- ÜBER MICH -->
-    <div class="card">
-      <h2 class="section-title">Über mich</h2>
-      <p>Ich begleite meine Klientinnen und Klienten strukturiert, respektvoll und individuell durch den gesamten MPU-Prozess – von der Analyse bis zum sicheren Auftreten im Gespräch.</p>
-      <img class="hero-img" src="foto2.jpg.JPG" alt="Über mich">
-    </div>
+  <label>Worum geht es bei deiner MPU?</label>
+  <select name="MPU-Grund" required>
+    <option value="">Bitte auswählen</option>
+    <option>Alkohol</option>
+    <option>Drogen</option>
+    <option>Punkte</option>
+    <option>Sonstiges</option>
+  </select>
 
-    <!-- ABLAUF -->
-    <div class="card">
-      <h2 class="section-title">Ablauf</h2>
-      <ul>
-        <li><b>1) Erstgespräch</b> – kurz klären, was du brauchst & wie der Weg zur MPU aussieht</li>
-        <li><b>2) Plan</b> – klare Schritte + Vorbereitung auf deine persönliche Fragestellung</li>
-        <li><b>3) Training</b> – Gesprächsübungen, rote Linien, typische Fallen, sichere Antworten</li>
-        <li><b>4) Begleitung</b> – bis du dich stabil, vorbereitet und überzeugend fühlst</li>
-      </ul>
-    </div>
+  <label>Kurze Beschreibung deiner Situation</label>
+  <textarea name="Nachricht" rows="4" required></textarea>
 
-    <!-- FORMULAR -->
-    <div class="card" id="fragebogen">
-      <h2 class="section-title">Kostenloses Erstgespräch – Anfrage</h2>
-      <p>Fülle das Formular kurz aus. Ich melde mich zeitnah bei dir zurück.</p>
+  <br><br>
+  <button class="btn" type="submit">Anfrage senden</button>
 
-      <div class="hr"></div>
-
-      <!-- FormSubmit: sendet direkt an deine E-Mail -->
-      <form action="https://formsubmit.co/Katja.elvov@gmx.de" method="POST">
-        <!-- FormSubmit Einstellungen -->
-        <input type="hidden" name="_subject" value="Neue MPU-Anfrage über katjaelv.github.io" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_captcha" value="false" />
-        <!-- optional: nach dem Senden auf die Seite zurück -->
-        <input type="hidden" name="_next" value="https://katjaelv.github.io/#danke" />
-
-        <div class="row">
-          <div>
-            <label for="name">Name *</label>
-            <input id="name" name="Name" type="text" required placeholder="Vor- und Nachname">
-          </div>
-          <div>
-            <label for="email">E-Mail *</label>
-            <input id="email" name="E-Mail" type="email" required placeholder="name@email.de">
-          </div>
-        </div>
-
-        <div class="row">
-          <div>
-            <label for="phone">Telefon (optional)</label>
-            <input id="phone" name="Telefon" type="tel" placeholder="+49 ...">
-          </div>
-          <div>
-            <label for="ort">Ort *</label>
-            <select id="ort" name="Ort" required>
-              <option value="" selected disabled>Bitte auswählen</option>
-              <option>Kelkheim (Taunus)</option>
-              <option>Hofheim</option>
-              <option>Online</option>
-              <option>Flexibel / egal</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="row">
-          <div>
-            <label for="grund">Worum geht es bei der MPU? *</label>
-            <select id="grund" name="MPU-Grund" required>
-              <option value="" selected disabled>Bitte auswählen</option>
-              <option>Alkohol</option>
-              <option>Drogen</option>
-              <option>Punkte / Verkehr</option>
-              <option>Straftat (ohne Drogen/Alkohol)</option>
-              <option>Sonstiges</option>
-            </select>
-          </div>
-          <div>
-            <label for="termin">Wunschtermin / Zeitraum (optional)</label>
-            <input id="termin" name="Wunschtermin" type="text" placeholder="z.B. nächste Woche / abends / Wochenende">
-          </div>
-        </div>
-
-        <label for="msg">Kurzbeschreibung *</label>
-        <textarea id="msg" name="Nachricht" required placeholder="Was ist passiert? Wann ist die MPU ungefähr? Was ist dir wichtig?"></textarea>
-
-        <div class="check">
-          <input id="ds" type="checkbox" required>
-          <label for="ds" style="margin:0;font-weight:600">
-            Ich stimme zu, dass meine Angaben zur Kontaktaufnahme verarbeitet werden. *
-            <div class="small">Du erhältst die Anfrage als E-Mail (FormSubmit).</div>
-          </label>
-        </div>
-
-        <button class="btn submit" type="submit">Anfrage absenden</button>
-
-        <p class="small" style="margin-top:10px">
-          Hinweis: Mit dem Absenden wird eine E-Mail an <b>Katja.elvov@gmx.de</b> gesendet.
-        </p>
-      </form>
-    </div>
-
-    <!-- DANKE -->
-    <div class="card" id="danke">
-      <h2 class="section-title">Danke!</h2>
-      <p>Deine Anfrage wurde gesendet. Ich melde mich so schnell wie möglich bei dir.</p>
-      <a class="btn" href="#top">Zurück nach oben</a>
-    </div>
-
-  </div>
-</body>
-</html>
+</form>
+</div>
