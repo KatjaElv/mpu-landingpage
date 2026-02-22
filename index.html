@@ -1,126 +1,138 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Katja Elvov – MPU Coaching</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Katja Elvov – MPU Coaching</title>
 
-  <!-- Text, den iOS/Safari als Seitenbeschreibung zeigt -->
-  <meta name="description" content="Professionelles MPU Coaching in Kelkheim (Taunus), Hofheim & online. Strukturierte Vorbereitung, Gesprächstraining & individuelle Begleitung. Kostenloses Erstgespräch." />
+<style>
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial,sans-serif;
+  background:#0b1220;
+  color:#eaf0ff;
+}
 
-  <!-- WICHTIG: Absichtlich KEIN Icon/Logo setzen (damit das kleine Logo oben verschwindet) -->
-  <!-- (Keine <link rel="icon"> und keine <link rel="apple-touch-icon"> ) -->
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:24px;
+}
 
-  <style>
-    :root{
-      --bg:#0b1220;
-      --card:rgba(255,255,255,.06);
-      --border:rgba(255,255,255,.12);
-      --text:#eaf0ff;
-      --muted:rgba(234,240,255,.78);
-      --btn:#4f7cff;
-      --btn2:#2f62ff;
-      --danger:#ff5a5a;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-      background:radial-gradient(1200px 800px at 30% 0%, rgba(79,124,255,.18), transparent 60%),
-                 radial-gradient(900px 700px at 90% 30%, rgba(47,98,255,.14), transparent 55%),
-                 var(--bg);
-      color:var(--text);
-      line-height:1.45;
-    }
-    a{color:inherit}
-    .container{max-width:980px;margin:0 auto;padding:24px}
-    .card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:18px;
-      padding:22px;
-      margin:18px 0;
-      backdrop-filter: blur(8px);
-    }
-    h1,h2{margin:0 0 10px 0}
-    h1{font-size:40px;letter-spacing:-.5px}
-    h2{font-size:32px;letter-spacing:-.3px}
-    p{margin:0 0 12px 0;color:var(--muted);font-size:18px}
-    .btn{
-      display:inline-block;
-      background:linear-gradient(180deg,var(--btn),var(--btn2));
-      color:white;
-      padding:14px 22px;
-      border-radius:14px;
-      text-decoration:none;
-      font-weight:700;
-      margin-top:10px;
-    }
-    .hero-img{
-      width:100%;
-      max-width:720px;
-      border-radius:16px;
-      margin-top:16px;
-      display:block;
-    }
-    .section-title{margin-top:6px}
-    ul{margin:10px 0 0 18px;color:var(--muted);font-size:18px}
-    li{margin:6px 0}
-    .grid{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:12px;
-    }
-    label{display:block;font-weight:700;margin:10px 0 6px 0}
-    input,select,textarea{
-      width:100%;
-      padding:12px 12px;
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,.18);
-      background:rgba(10,16,30,.55);
-      color:var(--text);
-      font-size:16px;
-      outline:none;
-    }
-    textarea{min-height:120px;resize:vertical}
-    .row{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:12px;
-    }
- <div class="card" id="fragebogen">
+.card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+  padding:24px;
+  margin-bottom:20px;
+}
+
+h1,h2{
+  margin-top:0;
+}
+
+img{
+  max-width:100%;
+  border-radius:16px;
+}
+
+.btn{
+  display:inline-block;
+  background:#4f7cff;
+  color:white;
+  padding:14px 22px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
+  border:none;
+}
+
+input,select,textarea{
+  width:100%;
+  padding:12px;
+  margin:6px 0 14px 0;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.2);
+  background:#0f1a33;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<!-- HERO -->
+<div class="card">
+  <h1>Katja Elvov – MPU Coaching</h1>
+
+  <p>
+    Professionelle MPU-Vorbereitung mit Struktur, Klarheit und persönlicher Begleitung.
+    Vor Ort in <b>Kelkheim</b>, <b>Hofheim</b> oder <b>online</b>.
+  </p>
+
+  <a class="btn" href="#fragebogen">Kostenloses Erstgespräch</a>
+  <br><br>
+
+  <img src="foto1.jpg.JPG" alt="Katja Elvov">
+</div>
+
+<!-- ZERTIFIKAT -->
+<div class="card">
+  <h2>Zertifizierte MPU Beraterin</h2>
+  <p>
+    Geprüfte MPU Beratung – fundiert, seriös und ohne leere Versprechen.
+  </p>
+  <a class="btn" href="zertifikat.pdf.pdf" target="_blank">
+    Zertifikat ansehen (PDF)
+  </a>
+</div>
+
+<!-- ÜBER MICH -->
+<div class="card">
+  <h2>Über mich</h2>
+  <img src="foto2.jpg.JPG" alt="Über mich">
+  <p>
+    Ich begleite meine Klientinnen und Klienten strukturiert, respektvoll und individuell
+    durch den gesamten MPU-Prozess – von der Analyse bis zum sicheren Auftreten im Gespräch.
+  </p>
+</div>
+
+<!-- FORMULAR -->
+<div class="card" id="fragebogen">
 <h2>Kostenloses Erstgespräch – Anfrage</h2>
 
 <form action="https://formsubmit.co/Katja.elvov@gmx.de" method="POST">
 
-  <!-- FormSubmit Einstellungen -->
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_subject" value="Neue MPU Anfrage von Website">
-  <input type="hidden" name="_next" value="https://katjaelvov.github.io/#danke">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="Neue MPU Anfrage von Website">
 
-  <label>Name</label>
-  <input type="text" name="Name" required>
+<label>Name</label>
+<input type="text" name="Name" required>
 
-  <label>E-Mail</label>
-  <input type="email" name="Email" required>
+<label>E-Mail</label>
+<input type="email" name="Email" required>
 
-  <label>Telefon (optional)</label>
-  <input type="text" name="Telefon">
+<label>Telefon (optional)</label>
+<input type="text" name="Telefon">
 
-  <label>Worum geht es bei deiner MPU?</label>
-  <select name="MPU-Grund" required>
-    <option value="">Bitte auswählen</option>
-    <option>Alkohol</option>
-    <option>Drogen</option>
-    <option>Punkte</option>
-    <option>Sonstiges</option>
-  </select>
+<label>Worum geht es bei deiner MPU?</label>
+<select name="MPU-Grund" required>
+  <option value="">Bitte auswählen</option>
+  <option>Alkohol</option>
+  <option>Drogen</option>
+  <option>Punkte</option>
+  <option>Sonstiges</option>
+</select>
 
-  <label>Kurze Beschreibung deiner Situation</label>
-  <textarea name="Nachricht" rows="4" required></textarea>
+<label>Kurze Beschreibung deiner Situation</label>
+<textarea name="Nachricht" rows="4" required></textarea>
 
-  <br><br>
-  <button class="btn" type="submit">Anfrage senden</button>
+<button class="btn" type="submit">Anfrage senden</button>
 
 </form>
 </div>
+
+</div>
+</body>
+</html>
